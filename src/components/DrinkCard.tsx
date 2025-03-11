@@ -5,9 +5,9 @@ type DrinkCardPropos = {
   drink: Drink;
 };
 
-
 export default function DrinkCard({ drink }: DrinkCardPropos) {
-  const selectRecipe = useAppStore((state) => state.selectRecipe);
+  const getRecipesById = useAppStore((state) => state.getRecipesById);
+
   return (
     <div className="shadow-lg">
       <div className="overflow-hidden">
@@ -22,7 +22,7 @@ export default function DrinkCard({ drink }: DrinkCardPropos) {
         <h2 className="text-2xl truncate font-black">{drink.strDrink}</h2>
 
         <button
-          onClick={() => selectRecipe(drink.idDrink)}
+          onClick={() => getRecipesById(drink.idDrink)}
           type="button"
           className="bg-orange-400 hover:bg-orange-500 mt-5 w-full p-3 font-bold cursor-pointer"
         >

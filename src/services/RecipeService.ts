@@ -34,9 +34,8 @@ export async function getRecipesById(id: Drink["idDrink"]) {
   } = await axios(url);
 
   const result = RecipeAPIResponseSchema.safeParse(drinks[0]);
-    console.log(result)
   if (result.success) {
-    console.log(`Receta encontrada`)
+    console.log(`Receta encontrada`);
     return result.data;
   }
 }
