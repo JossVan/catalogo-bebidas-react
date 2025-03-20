@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    --theme-background: url('bg.jpg');
+    --theme-background: url('/bg.jpg');
   }
 }
 
